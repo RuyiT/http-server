@@ -1,0 +1,15 @@
+{
+  "name": "mysql-test",
+  "version": "1.0.0",
+  "description": "<!--\r  * @Author: v_renjuyuan\r  * @Date: 2020-05-24 17:07:05\r  * @LastEditors: Please set LastEditors\r  * @LastEditTime: 2020-05-27 00:05:42\r  * @FilePath: \\blog\\mysql-test\\readme.md\r  * @Description: \r  -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

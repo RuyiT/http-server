@@ -2,7 +2,7 @@
  * @Author: v_renjuyuan
  * @Date: 2020-05-15 01:18:07
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-05-24 16:37:44
+ * @LastEditTime: 2020-05-28 01:22:14
  * @FilePath: \blog\blog-1\app.js
  * @Description: 
  */
@@ -63,13 +63,26 @@ const serverHandle = (req, res) => {
   getPostData(req).then( postData => {
     req.body = postData
     // 处理 blog 路由
-    const blogData = handleBlogRouter(req, res)
-    if (blogData) {
-      res.end(
-        JSON.stringify(blogData)
-      )
+    const blogResult = handleBlogRouter(req, res)
+    if (blogResult) {
+      blogResult.then(blogData => {
+        console.log('blogdata',blogData)
+        res.end(
+          JSON.stringify(blogData)
+        )
+        console.log('666',JSON.stringify(blogData))
+      }).catch(err => {
+        console.log(err)
+      }) 
       return
     }
+    // const blogData = handleBlogRouter(req, res)
+    // if (blogData) {
+    //   res.end(
+    //     JSON.stringify(blogData)
+    //   )
+    //   return
+    // }
 
     // 处理 user 路由
     const userData = handleUserRouter(req, res)
