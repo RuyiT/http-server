@@ -2,7 +2,7 @@
  * @Author: v_renjuyuan
  * @Date: 2020-05-27 00:43:14
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-05-28 01:16:52
+ * @LastEditTime: 2020-05-28 01:28:15
  * @FilePath: \blog\blog-1\src\db\mysql.js
  * @Description: 
  */
@@ -14,9 +14,9 @@ const {
 
 // 创建连接对象
 console.log('MYSQL_CONF', MYSQL_CONF)
-const con = mysql.createConnection({
+const con = mysql.createConnection(
   MYSQL_CONF
-})
+)
 
 // 开始连接
 // con.connect()
